@@ -13,18 +13,22 @@ task main()
 	{
 		getJoystickSettings(joystick);
 
-if(joy1Btn(2) == 1)
- {motor[motorGamma] = 50;
-   wait1Msec(100);
-	    motor[motorGamma] = 0;}
+		if(joy1Btn(2) == 1)
+		{
+			motor[motorGamma] = 50;
+			wait1Msec(100);
+			motor[motorGamma] = 0;
+			}
 
-if(joy1Btn(3) == 1)
- {motor[motorGamma] = -50;
-  	wait1Msec(100);
-  	  motor[motorGamma] = 0;}
+		if(joy1Btn(3) == 1)
+		{
+			motor[motorGamma] = -50;
+			wait1Msec(100);
+			motor[motorGamma] = 0;
+			}
 
-  	  motor[motorAlpha] = joystick.joy1_y1;
-		motor[motorBeta] =	joystick.joy1_y2/-1;
+	 	motor[motorAlpha] = joystick.joy1_y1;
+		motor[motorBeta] = joystick.joy1_y2/-1;
 
   }
 }
