@@ -13,11 +13,19 @@ task main()
 		motor[motorAlpha] = 100;
 		motor[motorBeta] = 100;
 		wait10Msec(100);
+
 		motor[motorAlpha] = 0;
-		motor[motorBeta] = 0;
+	  motor[motorBeta] = 0;
 		wait1Msec(1000);
+
 		motor[motorAlpha] = 50;
 		motor[motorBeta] = 50/-1;
 		wait1Msec(1000);
+
+		motor[motorAlpha] = 50;
+		motor[motorBeta] = 50;
+		wait1Msec(1000);
+
+		//motor
 	}
 }

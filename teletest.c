@@ -13,14 +13,14 @@ task main()
 	{
 		getJoystickSettings(joystick);
 
-		if(joy1Btn(2) == 1)
+		if(joy2Btn(2) == 1)
 		{
 			motor[motorGamma] = 50;
 			wait1Msec(100);
 			motor[motorGamma] = 0;
 			}
 
-		if(joy1Btn(3) == 1)
+		if(joy2Btn(3) == 1)
 		{
 			motor[motorGamma] = -50;
 			wait1Msec(100);
