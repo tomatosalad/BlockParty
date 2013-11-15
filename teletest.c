@@ -27,8 +27,10 @@ task main()
 			motor[motorGamma] = 0;
 			}
 
-	 	motor[motorAlpha] = joystick.joy1_y1;
-		motor[motorBeta] = joystick.joy1_y2/-1;
+	 	//motor[motorAlpha] = joystick.joy1_y1;
+		//motor[motorBeta] = joystick.joy1_y2/-1;
+		motor[motorBeta] = (joystick.joy1_y1 * -1) + joystick.joy1_x1;
+		motor[motorAlpha] = joystick.joy1_y1 - joystick.joy1_x1;
 
   }
 }
