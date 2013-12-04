@@ -86,7 +86,7 @@ task main()
 			wait1Msec(500);
 
 				nMotorEncoder[motorBeta] = 0;
-				while(nMotorEncoder[motorBeta] > 0)
+				while(nMotorEncoder[motorBeta] < 285)
 					{
 		   			motor[motorAlpha] = -50;
 		   			motor[motorBeta] = -50;
@@ -118,13 +118,22 @@ wait1Msec(1);
 				  	motor[motorAlpha] = -50;
 				  	motor[motorBeta] = 50;
 				  }
-wait1Msec(1)
+wait1Msec(1);
 
 				 nMotorEncoder[motorBeta] = 0;
 				 while(nMotorEncoder[motorBeta] < 3285)
 				{
-					motor[motorAlpha] =
+					motor[motorAlpha] = 50;
+					motor[motorBeta] = 50;
 				}
 
+wait1Msec(1);
+
+				nMotorEncoder[motorBeta] = 0;
+				while(nMotorEncoder[motorBeta] < 5142)
+				{
+					motor[motorAlpha] = 100;
+					motor[motorBeta] = 100;
+				}
 
 }
