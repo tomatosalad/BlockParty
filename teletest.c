@@ -27,8 +27,14 @@ task main()
 			motor[motorGamma] = 0;
 			}
 
+		if(joy2Btn(1) == 1)
+		{
+			motor[motorDelta] = 50;
+			wait1Msec(10);
+			motor[motorGamma] = 0;
+			}
+
 	 	motor[motorAlpha] = joystick.joy1_y1;
 		motor[motorBeta] = joystick.joy1_y2/-1;
-
   }
 }
